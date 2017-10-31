@@ -15,7 +15,7 @@
 baseurl = "https://fanghuang007.github.io"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Fang Blog"
+title = "Fang's Blog"
 theme = "tranquilpeak"
 disqusShortname = ""
 # googleAnalytics = "UA-123-45"
@@ -31,15 +31,15 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
+  name = "Fang Huang"
+  bio = "**Going to be a data scientist**!"
+  job = "Post-doc at Tetherless World Constellation, Rensselaer Polytechnic Institute"
+  location = "USA"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "~/Document/Website/fanghuang007.github.io/data/icon.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
