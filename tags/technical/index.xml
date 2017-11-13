@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical on Bronzitte&#39;s Blog</title>
+    <link>https://bronzitte.github.io/blog/tags/technical/</link>
+    <description>Recent content in Technical on Bronzitte&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bronzitte.github.io/blog/tags/technical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayes test</title>
+      <link>https://bronzitte.github.io/blog/2017/11/bayes-test/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bronzitte.github.io/blog/2017/11/bayes-test/</guid>
+      <description>Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &amp;hellip; import numpy as np import matplotlib.</description>
+    </item>
+    
+  </channel>
+</rss>
