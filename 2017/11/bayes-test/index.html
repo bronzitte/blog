@@ -30,15 +30,15 @@
     
 
     
-    <meta name="description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &hellip; import numpy as np import matplotlib.">
-    <meta property="og:description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &hellip; import numpy as np import matplotlib.">
+    <meta name="description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries .">
+    <meta property="og:description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries .">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Bayes test">
     <meta property="og:url" content="/2017/11/bayes-test/">
     <meta property="og:site_name" content="Bronzitte&#39;s Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Bronzitte&#39;s Blog">
-    <meta name="twitter:description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &hellip; import numpy as np import matplotlib.">
+    <meta name="twitter:description" content="Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries .">
     
     
 
@@ -61,6 +61,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
     
     
     <link rel="stylesheet" href="https://bronzitte.github.io/blog/css/style-fpbzgxsy0kgmdvyrj5ykkg6ratccrk3gocmaqn4xpcjywmv5dteilzucro4f.min.css" />
@@ -243,9 +247,7 @@ ga('send', 'pageview');
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h1 id="bayesian-logistic-uncertain-reaction-blur-model">Bayesian Logistic Uncertain Reaction (BLUR) Model</h1>
+              <h1 id="bayesian-logistic-uncertain-reaction-blur-model">Bayesian Logistic Uncertain Reaction (BLUR) Model</h1>
 
 <ul>
 <li>Bayesian statistical approach to calibrating thermodynamic databases</li>
@@ -261,7 +263,7 @@ ga('send', 'pageview');
 <li>Built entirely with robust probability models <strong>resistant to outlier bias</strong></li>
 </ul>
 
-<h2 id="import-libraries">Import libraries &hellip;</h2>
+<h2 id="import-libraries-">Import libraries ...</h2>
 
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
@@ -287,7 +289,7 @@ importlib.reload(phasepy)
 
 <ul>
 <li>$\Delta G_{R} &lt; 0$: Forward Reaction</li>
-<li>$\Delta G_{R} &gt; 0$: Reverse Reaction</li>
+<li><span  class="math">\(\Delta G_{R} > 0\)</span>: Reverse Reaction</li>
 </ul>
 
 <pre><code class="language-python">dGrxn_a = np.linspace(-10,10,1001)
@@ -311,23 +313,23 @@ plt.xlim(-3,3)
 plt.show()
 </code></pre>
 
-<p><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_4_0.png" alt="png" /></p>
+<p><figure><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_4_0.png" alt="png"></figure></p>
 
 <h3 id="rxn-energy-uncertainty">Rxn Energy Uncertainty</h3>
 
 <ul>
 <li>Total uncertainty, $\sigma_{\Delta G}$, is determined by error propagation</li>
 <li>independent errors add in quadrature:
-$$\sigma_{\Delta G}^2 = \left(\frac{\partial G}{\partial T} \cdot \sigma_T\right)^2 + \left( \frac{\partial G}{\partial P} \cdot \sigma_P \right)^2$$</li>
+<span  class="math">\(\sigma_{\Delta G}^2 = \left(\frac{\partial G}{\partial T} \cdot \sigma_T\right)^2 + \left( \frac{\partial G}{\partial P} \cdot \sigma_P \right)^2\)</span></li>
 </ul>
 
-<p>$$\sigma_{\Delta G}^2 = \left(\Delta S_R \cdot \sigma_T\right)^2 + \left( \Delta V_R \cdot \sigma_P \right)^2$$</p>
+<p><span  class="math">\[\sigma_{\Delta G}^2 = \left(\Delta S_R \cdot \sigma_T\right)^2 + \left( \Delta V_R \cdot \sigma_P \right)^2\]</span></p>
 
 <ul>
 <li>For applications with solution phases, there are additional terms associated with compositional uncertainty of each phase</li>
 </ul>
 
-<h2 id="reaction-kinetics-separates-forward-reverse-reactions">Reaction kinetics separates forward &amp; reverse reactions</h2>
+<h2 id="reaction-kinetics-separates-forward--reverse-reactions">Reaction kinetics separates forward &amp; reverse reactions</h2>
 
 <ul>
 <li>Observed reaction direction is made uncertain by kinetics</li>
@@ -359,14 +361,14 @@ plt.show()
   out = log(s)
 </code></pre>
 
-<p><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_7_1.png" alt="png" /></p>
+<p><figure><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_7_1.png" alt="png"></figure></p>
 
 <h2 id="reaction-threshold-energy-depends-on-experimental-conditions">Reaction Threshold Energy depends on experimental conditions</h2>
 
 <ul>
 <li>Energy threshold $G_R^{\rm th}$ can vary dramatically in response to experimental conditions</li>
 <li>We introduce unitless reaction parameters ($\alpha_i$), to capture linear dependence on experimental conditions ($x_i$) :
-$$\log \left( \frac{G_R^{\rm th}}{\rm J/mol} \right) = \sum_i \alpha_i x_i$$</li>
+<span  class="math">\(\log \left( \frac{G_R^{\rm th}}{\rm J/mol} \right) = \sum_i \alpha_i x_i\)</span></li>
 
 <li><p>The <strong>most important modeled parameters</strong> are:</p>
 
@@ -375,7 +377,7 @@ $$\log \left( \frac{G_R^{\rm th}}{\rm J/mol} \right) = \sum_i \alpha_i x_i$$</li
 <li><strong>temperature</strong>: $x_T = \frac{T}{\rm Kelvin}$</li>
 <li><strong>water</strong>: $x_w =$ 1 if water present (otherwise 0)</li>
 <li><strong>reaction studied</strong>: $x_R = 1$ for reaction $R$ (otherwise 0)
-<br /></li>
+<br></li>
 </ul></li>
 
 <li><p>For positive values ($\alpha_i &gt; 0$), $x_i$ increases the threshold energy</p></li>
@@ -415,9 +417,9 @@ plt.show()
   out = log(s)
 </code></pre>
 
-<p><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_10_1.png" alt="png" /></p>
+<p><figure><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_10_1.png" alt="png"></figure></p>
 
-<h2 id="define-plotting-analysis-functions">Define Plotting/Analysis Functions</h2>
+<h2 id="define-plottinganalysis-functions">Define Plotting/Analysis Functions</h2>
 
 <pre><code class="language-python">def calc_rxn_trans(dGrxn_a,sigG_a):
     Gth = 1.0
@@ -485,24 +487,24 @@ plot_rxn_trans(rxn_trans_l, sigG_a)
 # plt.savefig('rxn-transition-schematic.eps')
 </code></pre>
 
-<p><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_14_0.png" alt="png" /></p>
+<p><figure><img src="http://res.cloudinary.com/dqbkvn32w/image/upload/v1510606543/Bronzitte-blog/output_14_0.png" alt="png"></figure></p>
 
 <h2 id="bayes-theorem-used-to-perform-calibration">Bayes Theorem used to perform calibration</h2>
 
 <ul>
 <li>Want to infer <strong>posterior: model family of acceptable parameters given the data</strong></li>
 <li>Bayes Theorem:
-$$P({\rm model}\;|\;{\rm data}) \propto P({\rm data}\;|\;{\rm model}) \cdot P({\rm model})$$
-$${\rm Posterior} \propto {\rm Likelihood} \cdot {\rm Prior}$$</li>
+<span  class="math">\(P({\rm model}\;|\;{\rm data}) \propto P({\rm data}\;|\;{\rm model}) \cdot P({\rm model})\)</span>
+<span  class="math">\({\rm Posterior} \propto {\rm Likelihood} \cdot {\rm Prior}\)</span></li>
 <li>Thus the fitness cost function is given by:
-$${\rm Cost} = -\log_e({\rm Prob})$$
+<span  class="math">\({\rm Cost} = -\log_e({\rm Prob})\)</span>
 
 <ul>
 <li>Minimizing the cost function maximizes the posterior</li>
 </ul></li>
 <li>Full posterior can be approximated by calculating the curvature of the log-probability (or cost-function)</li>
 <li>Covariance matrix is given by the inverse the curvature matrix (Hessian):
-$$\Sigma \approx - H^{-1}$$</li>
+<span  class="math">\(\Sigma \approx - H^{-1}\)</span></li>
 </ul>
 
               
@@ -685,6 +687,7 @@ $$\Sigma \approx - H^{-1}$$</li>
   </ul>
 </div>
 <div id="share-options-mask" class="share-options-mask"></div>
+      <script>renderMathInElement(document.body);</script>
     </div>
     
     <div id="about">
@@ -746,7 +749,7 @@ $$\Sigma \approx - H^{-1}$$</li>
                   Nov 11, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &hellip; import numpy as np import matplotlib.</div>
+              <div class="media-content hide-xs font-merryweather">Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries .</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -772,24 +775,6 @@ $$\Sigma \approx - H^{-1}$$</li>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                <h3 class="media-heading">Welcome to Tranquilpeak 0.4.1-BETA</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2015
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.
-</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
               <a class="link-unstyled" href="https://bronzitte.github.io/blog/2015/05/elements-showcase/">
                 <h3 class="media-heading">Elements showcase</h3>
               </a>
@@ -800,23 +785,6 @@ $$\Sigma \approx - H^{-1}$$</li>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>Check out how Tranquilpeak theme display well HTML elements (title, paragraph, blockquote, table and more..). It&rsquo;s simple and elegant.
 </p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://bronzitte.github.io/blog/2015/05/cover-image-showcase/">
-                <h3 class="media-heading">Cover image showcase</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  May 5, 2015
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -912,6 +880,42 @@ $$\Sigma \approx - H^{-1}$$</li>
             <hr>
           </div>
         
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bronzitte.github.io/blog/2014/08/video-integrations-showcase/">
+                <h3 class="media-heading">Video integrations showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Youtube and Vimeo videos are easily integrated thanks to tags plugins. Of course, you can add video other platforms like dailymotion.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bronzitte.github.io/blog/2013/10/chinese-test/">
+                <h3 class="media-heading">中文測試</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>This is a chinese test post to show you how chinese is displayed.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
       </div>
     </div>
     <div class="modal-footer">
@@ -919,7 +923,7 @@ $$\Sigma \approx - H^{-1}$$</li>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         15 posts found
+         13 posts found
       </p>
     </div>
   </div>

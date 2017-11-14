@@ -58,6 +58,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
+    
     
     <link rel="stylesheet" href="https://bronzitte.github.io/blog/css/style-fpbzgxsy0kgmdvyrj5ykkg6ratccrk3gocmaqn4xpcjywmv5dteilzucro4f.min.css" />
     
@@ -225,32 +229,12 @@ ga('send', 'pageview');
                   chinese
                 </a>
               
-                <a class="tag tag--primary tag--small" href="#cover-image-list" data-tag="cover-image">
-                  cover-image
-                </a>
-              
                 <a class="tag tag--primary tag--small" href="#dailymotion-list" data-tag="dailymotion">
                   dailymotion
                 </a>
               
-                <a class="tag tag--primary tag--small" href="#disqus-list" data-tag="disqus">
-                  disqus
-                </a>
-              
                 <a class="tag tag--primary tag--small" href="#github-theme-list" data-tag="github-theme">
                   github-theme
-                </a>
-              
-                <a class="tag tag--primary tag--small" href="#google-analytics-list" data-tag="google-analytics">
-                  google-analytics
-                </a>
-              
-                <a class="tag tag--primary tag--small" href="#gravatar-list" data-tag="gravatar">
-                  gravatar
-                </a>
-              
-                <a class="tag tag--primary tag--small" href="#hexo-theme-list" data-tag="hexo-theme">
-                  hexo-theme
                 </a>
               
                 <a class="tag tag--primary tag--small" href="#highlight-code-list" data-tag="highlight-code">
@@ -279,10 +263,6 @@ ga('send', 'pageview');
               
                 <a class="tag tag--primary tag--small" href="#research-list" data-tag="research">
                   research
-                </a>
-              
-                <a class="tag tag--primary tag--small" href="#responsive-list" data-tag="responsive">
-                  responsive
                 </a>
               
                 <a class="tag tag--primary tag--small" href="#social-list" data-tag="social">
@@ -365,26 +345,6 @@ ga('send', 'pageview');
                   </ul>
                 </div>
               
-                <div id="cover-image-list" class="archive box" data-tag="cover-image">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="cover-image">
-                      cover-image (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/05/cover-image-showcase/">
-                          Cover image showcase
-                        </a>
-                        <span class="archive-post-date"> - 
-  May 13, 2015
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
                 <div id="dailymotion-list" class="archive box" data-tag="dailymotion">
                   <h4 class="archive-title">
                     <a class="link-unstyled" href="dailymotion">
@@ -405,26 +365,6 @@ ga('send', 'pageview');
                   </ul>
                 </div>
               
-                <div id="disqus-list" class="archive box" data-tag="disqus">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="disqus">
-                      disqus (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                          Welcome to Tranquilpeak 0.4.1-BETA
-                        </a>
-                        <span class="archive-post-date"> - 
-  June 15, 2015
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
                 <div id="github-theme-list" class="archive box" data-tag="github-theme">
                   <h4 class="archive-title">
                     <a class="link-unstyled" href="github-theme">
@@ -439,66 +379,6 @@ ga('send', 'pageview');
                         </a>
                         <span class="archive-post-date"> - 
   March 23, 2015
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
-                <div id="google-analytics-list" class="archive box" data-tag="google-analytics">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="google-analytics">
-                      google-analytics (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                          Welcome to Tranquilpeak 0.4.1-BETA
-                        </a>
-                        <span class="archive-post-date"> - 
-  June 15, 2015
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
-                <div id="gravatar-list" class="archive box" data-tag="gravatar">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="gravatar">
-                      gravatar (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                          Welcome to Tranquilpeak 0.4.1-BETA
-                        </a>
-                        <span class="archive-post-date"> - 
-  June 15, 2015
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
-                <div id="hexo-theme-list" class="archive box" data-tag="hexo-theme">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="hexo-theme">
-                      hexo-theme (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                          Welcome to Tranquilpeak 0.4.1-BETA
-                        </a>
-                        <span class="archive-post-date"> - 
-  June 15, 2015
 </span>
                       </li>
                     
@@ -639,26 +519,6 @@ ga('send', 'pageview');
                         </a>
                         <span class="archive-post-date"> - 
   November 13, 2017
-</span>
-                      </li>
-                    
-                  </ul>
-                </div>
-              
-                <div id="responsive-list" class="archive box" data-tag="responsive">
-                  <h4 class="archive-title">
-                    <a class="link-unstyled" href="responsive">
-                      responsive (1)
-                    </a>
-                  </h4>
-                  <ul class="archive-posts">
-                    
-                      <li class="archive-post">
-                        <a class="archive-post-title" href="https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/">
-                          Welcome to Tranquilpeak 0.4.1-BETA
-                        </a>
-                        <span class="archive-post-date"> - 
-  June 15, 2015
 </span>
                       </li>
                     

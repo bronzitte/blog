@@ -17,7 +17,7 @@
       <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bronzitte.github.io/blog/2017/11/bayes-test/</guid>
-      <description>Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries &amp;hellip; import numpy as np import matplotlib.</description>
+      <description>Bayesian Logistic Uncertain Reaction (BLUR) Model  Bayesian statistical approach to calibrating thermodynamic databases Past calibration methods all assume perfect thermodynamic equilibrium Equilibrium assumption produces step-function reaction boundaries, which look nothing like real experimental data BLUR model smears out reaction boundaries resulting from both:  measurement uncertainties reaction kinetics  Bayesian approach enables straightforward inclusion of prior constraints Built entirely with robust probability models resistant to outlier bias  Import libraries .</description>
     </item>
     
     <item>
@@ -30,16 +30,6 @@
     </item>
     
     <item>
-      <title>Welcome to Tranquilpeak 0.4.1-BETA</title>
-      <link>https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bronzitte.github.io/blog/2015/06/welcome-to-tranquilpeak-0.4.1-beta/</guid>
-      <description>&lt;p&gt;Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Elements showcase</title>
       <link>https://bronzitte.github.io/blog/2015/05/elements-showcase/</link>
       <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
@@ -47,15 +37,6 @@
       <guid>https://bronzitte.github.io/blog/2015/05/elements-showcase/</guid>
       <description>&lt;p&gt;Check out how Tranquilpeak theme display well HTML elements (title, paragraph, blockquote, table and more..). It&amp;rsquo;s simple and elegant.
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cover image showcase</title>
-      <link>https://bronzitte.github.io/blog/2015/05/cover-image-showcase/</link>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://bronzitte.github.io/blog/2015/05/cover-image-showcase/</guid>
-      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
     </item>
     
     <item>
